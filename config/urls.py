@@ -17,6 +17,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+handler404 = 'member.views.page_not_found'
 
 # admin.sites.AdminSite.site_header = 'SHOP3 관리'
 # admin.sites.AdminSite.site_title = 'SHOP3 관리'

@@ -34,3 +34,9 @@ def signup(request):
         profile_form = ProfileForm()
 
     return render(request, 'member/signup.html', {'form':form, 'profile_form':profile_form})
+
+def page_not_found(request, exception):
+    """
+    404 Page not found
+    """
+    return render(request, 'member/404.html', {})
