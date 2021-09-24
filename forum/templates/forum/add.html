@@ -1,0 +1,11 @@
+{% extends "member/base.html" %}
+{% block content %}
+<div class="container-lg my-3">
+    <form method="POST" class="post-form" action="{% url 'forum:add' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">저장</button>
+    </form>
+</div>
+
+{% endblock %}

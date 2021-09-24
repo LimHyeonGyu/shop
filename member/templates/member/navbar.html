@@ -10,7 +10,7 @@
                 <span class="navbar-text"> {{user.username}}님이 로그인되었습니다.</span>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'account_logout' %}">로그아웃</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'member:logout' %}">로그아웃</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'cart:list' %}">장바구니</a>
@@ -20,7 +20,7 @@
             </li>
             {% else %}
             <li class="nav-item">
-                <a class="nav-link active" href="{% url 'account_login' %}">로그인</a>
+                <a class="nav-link active" href="{% url 'member:login' %}">로그인</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="{% url 'member:signup' %}">회원가입</a>
@@ -28,6 +28,9 @@
             {% endif %}
             <li class="nav-item">
                 <a class="nav-link active" href="{% url 'product:list' %}">상품</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'forum:list' %}">게시판</a>
             </li>
         </ul>
         <form class="d-flex mx-4" action="{% url 'product:list' %}"method="GET">
